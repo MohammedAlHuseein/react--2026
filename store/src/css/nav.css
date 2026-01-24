@@ -1,0 +1,12 @@
+#nav{
+    display: flex;
+    background-color: bisque;
+    height: 120px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    margin-left: 35%;
+    margin-top: 30px;
+}
