@@ -4,15 +4,23 @@ import Navbar from './componet/navbar';
 import Footer from './componet/footer';
 import Home from './componet/home';
 import Product from './componet/product';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-     <Navbar/>
-     <Footer/>
-      <Home/>
-      <Product/>
-    </div>
+  <BrowserRouter>
+  <Navbar/>
+<Routes>
+  <Route path='/' Component={Home}/>
+   <Route path='/prod' Component={Product}/>
+</Routes>
+
+
+
+  <Footer/>
+  </BrowserRouter> 
+  
     
   );
 }

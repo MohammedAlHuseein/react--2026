@@ -1,17 +1,33 @@
+import { useState } from 'react'
 import '../css/product.css'
 export default function Product(){
+
+    const[count,setcount]=useState(0)
     return(
-        <div>
+       
         <div id="product">
-            <p> product </p>
+            <h1> product </h1>
+
+            <p> this is count = {count} </p>
+            <button onClick={()=>
+                setcount(count+1)
+            }> Increase </button>
+            <br></br>
+            <button onClick={()=>
+                setcount(count-1)
+            }>Decrease</button>
+            <br></br>
+            <button onClick={()=>
+                setcount(count*2)
+            }>Double </button>
+            <br></br>
+            <button onClick={()=>
+                setcount(0)
+            } >Rest</button>
         </div>
-        <div id="img">
-            <img 
-            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyPM9n6Cizmh_-x663DF4Y9LZxxZzW9BrS_A&s'
-            alt='photo'
-            width="200"
-            />
-        </div>
-        </div>
+        
+          
+        
+      
     )
 }
